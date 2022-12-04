@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcuter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class=" mx-auto mt-9 max-w-7xl text-center">
+        <h2 class="text-8xl">Header top area</h2>
+    </header>
+    <section class="mt-9 bg-current mx-auto max-w-xs py-4 px-4">
+        <input type="text" id="input"  class="mb-9">
+        <div class=" buttons grid grid-cols-4 gap-4 ">
+            <button class="py-4 px-4 bg-orange-400" onclick="allcl()">C</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('/')">/</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('*')">*</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('-')">-</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('7')">7</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('8')">8</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('9')">9</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('+')">+</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('4')">4</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('5')">5</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('6')">6</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="cale('=')">=</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('1')">1</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('2')">2</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('3')">3</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('.')">.</button>
+            <button class="py-4 px-4 bg-orange-400" onclick="show('0')">0</button>
+        </div>
+    </section>
+    <script>
+        let count = document.getElementById('input');
+        function show(params) {
+            count.value += params;
+        }
+
+        function allcl(){
+            count.value = '';
+        }
+
+        function cale(){
+            let x = count.value
+            let y = eval(x)
+            count.value = y;
+        }
+
+    </script>
+</body>
+</html>
